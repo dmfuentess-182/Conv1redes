@@ -1050,3 +1050,57 @@ Vlan1                  192.168.10.254  YES manual up                    up\n`;
       window.notebookAppApi.notifyAppReady();
     }
   });
+
+  /* =====================================================================
+     MENÚ HAMBURGUESA + HEADER FIJO
+     ===================================================================== */
+  (function () {
+    var toggle = document.getElementById('menu-toggle');
+    var panel = document.getElementById('main-menu');
+    var header = document.querySelector('.masthead');
+    if (!toggle || !panel || !header) return;
+
+    function setMenu(open) {
+      panel.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+    }
+
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setMenu(!panel.classList.contains('open'));
+    });
+
+    // Cerrar al elegir una opción
+    panel.addEventListener('click', function (e) {
+      if (e.target.closest('.menu-item')) setMenu(false);
+    });
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener('click', function (e) {
+      if (panel.classList.contains('open') && !panel.contains(e.target)) setMenu(false);
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && panel.classList.contains('open')) {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    // Header compacto al hacer scroll (con histéresis para evitar parpadeo)
+    var compact = false;
+    function onScroll() {
+      var y = window.pageYOffset || document.documentElement.scrollTop;
+      if (!compact && y > 120) {
+        compact = true;
+        header.classList.add('compact');
+      } else if (compact && y < 20) {
+        compact = false;
+        header.classList.remove('compact');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
