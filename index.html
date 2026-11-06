@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="dashboard">
+  <meta name="design-style" content="carbon">
+  <title>Diseño de Redes — CIPAS ERROR 404 | Universidad del Tolima</title>
+  
+  <!-- IBM Plex Sans & IBM Plex Mono via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand-block">
+        <span class="brand-sub">Universidad del Tolima · IDEAD - CAT Suba · Ingeniería de Sistemas</span>
+        <h1 class="brand-title">Diseño de Redes — Resumen Interactivo</h1>
+      </div>
+      <div class="meta-badges">
+        <span class="badge-tag highlight"><i data-lucide="shield-check" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> CIPAS ERROR 404</span>
+        <span class="badge-tag">Docente: Diana Marcela Cruz Suarez</span>
+        <span class="badge-tag">Bogotá D.C. · 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Horizontal Navigation -->
+  <nav class="navbar-container" aria-label="Navegación del Curso">
+    <div class="navbar-inner">
+      <button class="nav-btn active" id="nav-home" onclick="navigateTo('home')">
+        <i data-lucide="layout-grid" style="width:16px;height:16px;"></i>
+        <span>Home</span>
+      </button>
+      <button class="nav-btn" id="nav-t1" onclick="navigateTo('t1')">
+        <i data-lucide="layers" style="width:16px;height:16px;"></i>
+        <span>Tutoría 1: LAN & Modelos</span>
+      </button>
+      <button class="nav-btn" id="nav-t2" onclick="navigateTo('t2')">
+        <i data-lucide="binary" style="width:16px;height:16px;"></i>
+        <span>Tutoría 2: Direccionamiento LAN</span>
+      </button>
+      <button class="nav-btn" id="nav-t3" onclick="navigateTo('t3')">
+        <i data-lucide="git-fork" style="width:16px;height:16px;"></i>
+        <span>Tutoría 3: Redundancia STP</span>
+      </button>
+      <button class="nav-btn" id="nav-t4" onclick="navigateTo('t4')">
+        <i data-lucide="route" style="width:16px;height:16px;"></i>
+        <span>Tutoría 4: Enrutamiento RIP</span>
+      </button>
+      <button class="nav-btn" id="nav-t5" onclick="navigateTo('t5')">
+        <i data-lucide="network" style="width:16px;height:16px;"></i>
+        <span>Tutoría 5: OSPF & Lab Video</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Views -->
+  <main class="page-main">
+
+    <!-- ========================================== -->
+    <!-- VIEW 1: HOME                               -->
+    <!-- ========================================== -->
+    <section id="view-home" class="view-section active">
+      <div class="section-header">
+        <span class="section-eyebrow">Resumen de tutorias vistas</span>
+        <h2 class="section-title"><strong>Diseño de Redes</strong></h2>
+        <p class="section-lead">
+          La presente plataforma teórica preneta un resumen de los visto en las tutorias 1,2,3,4 y 5 desarrollada por el <strong>CIPAS ERROR 404</strong> para la asignatura de Diseño de Redes. Se presentan los fundamentos de capas OSI/TCP-IP, direccionamiento IPv4, alta disponibilidad con STP, enrutamiento estático vs dinámico (RIP) y protocolos de estado de enlace (OSPF).
+        </p>
+      </div>
+
+      <!-- Quick Access Modules Grid -->
+      <h3 style="font-size: 2.5rem; font-weight: 600; margin-bottom: var(--space-md); border-bottom: var(--rule); padding-bottom: var(--space-xs);">
+        Tutorias
+      </h3>
+
+      <div class="grid-3" style="margin-bottom: var(--space-xl);">
+        <!-- Card 1 -->
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-sm);">
+            <span class="tag">Tutoría 1</span>
+            <i data-lucide="layers" style="color: var(--primary); width: 20px; height: 20px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Fundamentos & Modelos de Red</h4>
+          <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+            Diferenciación geográfica (LAN, MAN, WAN, WLAN), medios de transmisión (UTP Cat 5e/6 vs Fibra Óptica), topologías físicas y la relación técnica entre OSI y TCP/IP.
+          </p>
+          <button class="btn btn-secondary btn-sm" onclick="navigateTo('t1')" style="width: 100%;">
+            Abrir Tutoría 1 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-sm);">
+            <span class="tag">Tutoría 2</span>
+            <i data-lucide="binary" style="color: var(--primary); width: 20px; height: 20px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Direccionamiento LAN & Gateway</h4>
+          <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+            Diseño por departamentos (Administración, Ventas, Soporte), cálculo de máscaras /24, simulación de Gateway, comando ping y resolución de cuestionario de laboratorio.
+          </p>
+          <button class="btn btn-secondary btn-sm" onclick="navigateTo('t2')" style="width: 100%;">
+            Abrir Tutoría 2 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-sm);">
+            <span class="tag">Tutoría 3</span>
+            <i data-lucide="git-fork" style="color: var(--primary); width: 20px; height: 20px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Redundancia STP & Switch CLI</h4>
+          <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+            Control de tormentas de difusión con IEEE 802.1D, tramas BPDU, simulador interactivo de elección de Root Bridge y emulador de consola Cisco CLI.
+          </p>
+          <button class="btn btn-secondary btn-sm" onclick="navigateTo('t3')" style="width: 100%;">
+            Abrir Tutoría 3 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-sm);">
+            <span class="tag">Tutoría 4</span>
+            <i data-lucide="route" style="color: var(--primary); width: 20px; height: 20px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Enrutamiento: Estático vs RIP</h4>
+          <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+            Comparativa de convergencia y sobrecarga, análisis de tablas de enrutamiento con códigos C, S y R, simulación de tolerancia a fallos y generador de comandos IOS.
+          </p>
+          <button class="btn btn-secondary btn-sm" onclick="navigateTo('t4')" style="width: 100%;">
+            Abrir Tutoría 4 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-sm);">
+            <span class="tag">Tutoría 5</span>
+            <i data-lucide="network" style="color: var(--primary); width: 20px; height: 20px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">OSPF, Dijkstra & Video Lab</h4>
+          <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+            Protocolos de estado de enlace, arquitectura por Áreas (Área 0 Backbone), cálculo de costo por ancho de banda y reproductor integrado del laboratorio práctico.
+          </p>
+          <button class="btn btn-secondary btn-sm" onclick="navigateTo('t5')" style="width: 100%;">
+            Abrir Tutoría 5 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
+
+        <!-- Card Course Info -->
+        <div class="layer-card" style="background-color: var(--primary-container); border-color: var(--primary);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-sm);">
+            <span class="tag" style="background-color: var(--primary); color: #fff;">Presentado por:</span>
+            <i data-lucide="award" style="color: var(--primary); width: 20px; height: 20px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs); color: var(--on-primary-container);">
+            CIPAS ERROR 404
+          </h4>
+          <p style="font-size: 0.8125rem; color: var(--on-primary-container); margin-bottom: var(--space-sm);">
+            <strong>Integrantes:</strong><br>
+            • Diego Mauricio Fuentes Sanabria<br>
+            • Laura Yulisa Mejía Velásquez<br>
+            <strong>Programa:</strong> Ingeniería de Sistemas<br>
+            <strong>Sede:</strong> IDEAD CAT Suba, Bogotá D.C.
+          </p>
+          <span class="tag neutral" style="font-size: 0.7rem;">Año Académico 2026</span>
+        </div>
+      </div>
+
+      <!-- Cisco Enterprise Technology Context -->
+      <div class="layer-card" style="margin-bottom: var(--space-xl);">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-xs);">
+          Beneficios y Relevancia de aprender a usar Cisco en Entornos Corporativos
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+          Las redes de telecomunicaciones modernas requieren estándares rigurosos de disponibilidad, escalabilidad y seguridad. La adopción de la arquitectura y hardware Cisco aporta ventajas críticas:
+        </p>
+
+        <div class="grid-3">
+          <div class="layer-card nested">
+            <h5 style="font-family: var(--font-label); font-size: 0.8125rem; color: var(--primary); text-transform: uppercase; margin-bottom: var(--space-xs);">
+              1. Modelo Jerárquico de 3 Capas
+            </h5>
+            <p style="font-size: 0.8125rem; color: var(--on-surface);">
+              Estructura la red en <strong>Núcleo (Core)</strong> para transporte ultrarrápido sin filtrado, <strong>Distribución</strong> para enrutamiento entre VLANs y políticas de seguridad (firewall/QoS), y <strong>Acceso</strong> para la conexión de hosts terminales. Esto evita cuellos de botella y permite crecimiento modular.
+            </p>
+          </div>
+
+          <div class="layer-card nested">
+            <h5 style="font-family: var(--font-label); font-size: 0.8125rem; color: var(--primary); text-transform: uppercase; margin-bottom: var(--space-xs);">
+              2. Simulación con Packet Tracer
+            </h5>
+            <p style="font-size: 0.8125rem; color: var(--on-surface);">
+              Permite validar el diseño lógico y físico antes de su implementación en producción. Inspecciona tramas en tiempo real, verifica el intercambio de BPDUs en STP, comprueba tablas de rutas ARP/IP y modela la convergencia de protocolos como RIP y OSPF sin riesgo operativo.
+            </p>
+          </div>
+
+          <div class="layer-card nested">
+            <h5 style="font-family: var(--font-label); font-size: 0.8125rem; color: var(--primary); text-transform: uppercase; margin-bottom: var(--space-xs);">
+              3. Resiliencia & Convergencia
+            </h5>
+            <p style="font-size: 0.8125rem; color: var(--on-surface);">
+              Soporte nativo para protocolos estándares de la industria (IEEE 802.1D/802.1w STP, OSPF RFC 2328). Proporciona failover instantáneo ante fallos de enlaces físicos o puertos, asegurando el cumplimiento de acuerdos de nivel de servicio (SLA) y alta disponibilidad (99.999% uptime).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: TUTORÍA 1                          -->
+    <!-- ========================================== -->
+    <section id="view-t1" class="view-section">
+      <div class="section-header">
+        <span class="section-eyebrow">Tutoría 1 · Fundamentos de Redes</span>
+        <h2 class="section-title">Redes LAN, Topologías y <strong>Modelos OSI vs TCP/IP</strong></h2>
+        <p class="section-lead">
+          Una red de computadores es un sistema de comunicación compuesto por terminales autónomos (hosts) que poseen capacidad propia de procesamiento, cuyo fin primordial es facilitar el intercambio eficaz y transparente de información.
+        </p>
+      </div>
+
+      <!-- Scope Table & Comparison -->
+      <div class="layer-card">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-sm);">
+          Clasificación por Alcance Geográfico y Tecnologías
+        </h3>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Tipo de Red</th>
+                <th>Acrónimo & Definición</th>
+                <th>Cobertura Estimada</th>
+                <th>Infraestructura / Medio</th>
+                <th>Ejemplo de Aplicación Real</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>LAN</strong></td>
+                <td>Local Area Network</td>
+                <td class="mono-cell">~1 km</td>
+                <td>Cableado estructurado UTP (Cat 5e/Cat 6), Switches</td>
+                <td>Red interna de una oficina, laboratorio escolar o piso corporativo.</td>
+              </tr>
+              <tr>
+                <td><strong>MAN</strong></td>
+                <td>Metropolitan Area Network</td>
+                <td class="mono-cell">~10 km</td>
+                <td>Anillos de Fibra Óptica metropolitana, Enlaces Punto a Punto</td>
+                <td>Interconexión de edificios gubernamentales o sedes de una universidad.</td>
+              </tr>
+              <tr>
+                <td><strong>WAN</strong></td>
+                <td>Wide Area Network</td>
+                <td class="mono-cell">≥ 10 km (Global)</td>
+                <td>Líneas dedicadas, troncales de telecomunicaciones, Peering</td>
+                <td>Interconexión nacional de sucursales bancarias o la red global de Internet.</td>
+              </tr>
+              <tr>
+                <td><strong>WLAN</strong></td>
+                <td>Wireless Local Area Network</td>
+                <td class="mono-cell">Local (Inalámbrico)</td>
+                <td>Puntos de Acceso (AP), Ondas RF (WiFi IEEE 802.11)</td>
+                <td>Zonas WiFi para laptops y móviles en centros de convenciones o aeropuertos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <div class="callout-title">Caso Práctico: Empresa con Oficinas en Varias Ciudades</div>
+          <p style="font-size: 0.875rem;">
+            Cuando una empresa necesita interconectar oficinas en diferentes ciudades del país, la arquitectura obligatoria es una <strong>red WAN</strong>. Al superar holgadamente la distancia de 10 km, se requiere de operadores de telecomunicaciones, acuerdos de tránsito y peering, y routers de borde que encaminen el tráfico entre sistemas autónomos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive OSI vs TCP/IP Inspector -->
+      <div class="layer-card">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-xs);">
+          Matriz Interactiva: Arquitectura de 7 Capas OSI vs 4 Capas TCP/IP
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+          El modelo <strong>OSI</strong> es el marco de referencia teórico y conceptual de 7 niveles. El modelo <strong>TCP/IP</strong> es la arquitectura pragmática de 4 niveles que implementa la infraestructura real de Internet. Haz clic en cualquier capa para inspeccionar su hardware, PDU y protocolos.
+        </p>
+
+        <div class="grid-split">
+          <!-- OSI Stack -->
+          <div>
+            <span class="form-label" style="display: block; margin-bottom: var(--space-xs);">Selecciona una Capa para Inspeccionar:</span>
+            <div id="osi-stack-container" style="display: flex; flex-direction: column; gap: 4px;">
+              <!-- Generated via JS -->
+            </div>
+          </div>
+
+          <!-- Layer Detail Card -->
+          <div id="layer-detail-card" class="layer-card nested" style="min-height: 280px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+                <span class="tag" id="layer-tag">Capa 7 OSI</span>
+                <span class="tag neutral" id="layer-tcp-tag">TCP/IP Capa 4</span>
+              </div>
+              <h4 id="layer-name" style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-xs);">Capa de Aplicación</h4>
+              <p id="layer-desc" style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+                Proporciona interfaces y servicios directamente a los programas y usuarios finales para acceder a la red.
+              </p>
+            </div>
+            
+            <div style="border-top: var(--rule); padding-top: var(--space-sm); display: flex; flex-direction: column; gap: var(--space-xs); font-size: 0.8125rem;">
+              <div><strong>Unidad de Datos (PDU):</strong> <span id="layer-pdu" class="mono-cell">Datos</span></div>
+              <div><strong>Dispositivos Hardware:</strong> <span id="layer-hw">Computadores, Servidores, Gateways</span></div>
+              <div><strong>Protocolos Clave:</strong> <span id="layer-proto" class="mono-cell">HTTP, HTTPS, DNS, DHCP, SSH, FTP</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transport Layer: TCP vs UDP -->
+      <div class="layer-card">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-sm);">
+          Capa de Transporte: Comparativa TCP vs UDP
+        </h3>
+        <div class="grid-2">
+          <div class="layer-card nested" style="border-left: 3px solid var(--primary);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+              <h4 style="font-size: 1rem; font-weight: 600;">TCP (Transmission Control Protocol)</h4>
+              <span class="tag">Confiable</span>
+            </div>
+            <ul style="font-size: 0.8125rem; color: var(--on-surface-variant); padding-left: var(--space-md); margin-bottom: var(--space-sm); display: flex; flex-direction: column; gap: 4px;">
+              <li><strong>Orientado a la conexión:</strong> Requiere negociación en tres pasos (3-Way Handshake: SYN, SYN-ACK, ACK).</li>
+              <li><strong>Confirmación y Control:</strong> Garantiza entrega ordenada, detección y retransmisión de paquetes perdidos.</li>
+              <li><strong>Control de Congestión:</strong> Modula la velocidad de transmisión (ventana deslizante) para no saturar routers.</li>
+              <li><strong>Casos de uso:</strong> Navegación web (HTTP/HTTPS), descarga de archivos, correo electrónico, SSH.</li>
+            </ul>
+          </div>
+
+          <div class="layer-card nested" style="border-left: 3px solid var(--warning);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+              <h4 style="font-size: 1rem; font-weight: 600;">UDP (User Datagram Protocol)</h4>
+              <span class="tag amber">Baja Latencia</span>
+            </div>
+            <ul style="font-size: 0.8125rem; color: var(--on-surface-variant); padding-left: var(--space-md); margin-bottom: var(--space-sm); display: flex; flex-direction: column; gap: 4px;">
+              <li><strong>No orientado a la conexión:</strong> Envía datagramas inmediatamente sin comprobación de conexión previa.</li>
+              <li><strong>Sin confirmación ni retransmisión:</strong> Prioriza la inmediatez sobre la confiabilidad absoluta.</li>
+              <li><strong>Cabecera ligera (8 bytes):</strong> Consume un ancho de banda mínimo y requiere menor procesamiento de CPU.</li>
+              <li><strong>Casos de uso:</strong> Streaming de video/audio en vivo, telefonía VoIP, videojuegos online, consultas DNS.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Topologies Visualizer -->
+      <div class="layer-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Visualizador Interactivo de Topologías de Red</h3>
+            <p style="font-size: 0.875rem; color: var(--on-surface-variant);">
+              Disposición física y lógica a través de la cual se interconectan los hosts y conmutadores.
+            </p>
+          </div>
+          <div style="display: flex; gap: var(--space-xs); flex-wrap: wrap;" id="topo-btns">
+            <button class="btn btn-secondary btn-sm active" onclick="setTopology('estrella')">Estrella</button>
+            <button class="btn btn-secondary btn-sm" onclick="setTopology('bus')">Bus</button>
+            <button class="btn btn-secondary btn-sm" onclick="setTopology('anillo')">Anillo</button>
+            <button class="btn btn-secondary btn-sm" onclick="setTopology('malla')">Malla</button>
+            <button class="btn btn-secondary btn-sm" onclick="setTopology('arbol')">Árbol (Jerárquica)</button>
+          </div>
+        </div>
+
+        <div class="grid-split">
+          <!-- Canvas SVG -->
+          <div class="svg-diagram-wrapper">
+            <svg id="topo-svg" class="svg-canvas" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+              <!-- Rendered via JS -->
+            </svg>
+          </div>
+
+          <!-- Topology Info Card -->
+          <div class="layer-card nested" id="topo-info-panel" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="tag" id="topo-badge">Topología Predominante LAN</span>
+              <h4 id="topo-title" style="font-size: 1.125rem; font-weight: 600; margin: var(--space-xs) 0;">Topología en Estrella</h4>
+              <p id="topo-def" style="font-size: 0.8125rem; color: var(--on-surface-variant); margin-bottom: var(--space-sm);">
+                Todos los terminales se conectan de manera independiente a un concentrador o conmutador central (Switch).
+              </p>
+              
+              <div style="margin-bottom: var(--space-xs);">
+                <strong style="font-size: 0.8125rem; color: var(--positive);">Ventajas Clave:</strong>
+                <p id="topo-pros" style="font-size: 0.8125rem; color: var(--on-surface-variant);"></p>
+              </div>
+
+              <div style="margin-bottom: var(--space-xs);">
+                <strong style="font-size: 0.8125rem; color: var(--error);">Desventajas:</strong>
+                <p id="topo-cons" style="font-size: 0.8125rem; color: var(--on-surface-variant);"></p>
+              </div>
+            </div>
+
+            <div style="border-top: var(--rule); padding-top: var(--space-xs); font-size: 0.8125rem;">
+              <strong>Punto Único de Fallo (SPOF):</strong> <span id="topo-spof"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transmission Media Comparison -->
+      <div class="layer-card">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-sm);">
+          Medios Físicos de Transmisión: UTP Cat 5e / Cat 6 vs Fibra Óptica
+        </h3>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Medio de Transmisión</th>
+                <th>Frecuencia Máx.</th>
+                <th>Velocidad Típica</th>
+                <th>Inmunidad EMI</th>
+                <th>Alcance Máximo</th>
+                <th>Características & Norma</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>UTP Cat 5e</strong></td>
+                <td class="mono-cell">100 MHz</td>
+                <td class="mono-cell">1000 Mbit/s (1 Gbps)</td>
+                <td>Baja (sensible al ruido eléctrico)</td>
+                <td class="mono-cell">100 metros</td>
+                <td>Económico, cableado tradicional para oficinas y estaciones de trabajo.</td>
+              </tr>
+              <tr>
+                <td><strong>UTP Cat 6</strong></td>
+                <td class="mono-cell">250 MHz</td>
+                <td class="mono-cell">Hasta 10 Gbps (en tramos cortos)</td>
+                <td>Media (separador central de pares)</td>
+                <td class="mono-cell">100 metros (Gigabit)</td>
+                <td>Norma TIA/EIA-568-B, mayor ancho de banda y menor diafonía (crosstalk).</td>
+              </tr>
+              <tr>
+                <td><strong>Fibra Óptica (Monomodo/Multimodo)</strong></td>
+                <td class="mono-cell">> 100 GHz (Luz)</td>
+                <td class="mono-cell">10 Gbps a 100+ Gbps</td>
+                <td>Total (Inmune a interferencias electromagnéticas)</td>
+                <td class="mono-cell">De 2 km a > 40 km</td>
+                <td>Utiliza pulsos de luz en núcleo de vidrio. Ideal para enlaces troncales (Backbone) y WAN.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: TUTORÍA 2                          -->
+    <!-- ========================================== -->
+    <section id="view-t2" class="view-section">
+      <div class="section-header">
+        <span class="section-eyebrow">Tutoría 2 · Práctica de Laboratorio</span>
+        <h2 class="section-title">Direccionamiento LAN por Departamentos & <strong>Default Gateway</strong></h2>
+        <p class="section-lead">
+          Diseño y segmentación de red corporativa para los departamentos de <strong>Administración</strong> (192.168.10.0/24), <strong>Ventas</strong> (192.168.20.0/24) y <strong>Soporte</strong>, analizando el comportamiento del switch en Capa 2 y el enrutamiento hacia el Gateway en Capa 3.
+        </p>
+      </div>
+
+      <!-- Addressing Table with Department Filter -->
+      <div class="layer-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Tabla Maestra de Direccionamiento IP (Cisco Packet Tracer)</h3>
+            <p style="font-size: 0.875rem; color: var(--on-surface-variant);">
+              Asignación oficial de interfaces, hosts y compuertas de enlace del ejercicio de laboratorio.
+            </p>
+          </div>
+          <div style="display: flex; gap: var(--space-xs);" id="dept-filter-btns">
+            <button class="btn btn-secondary btn-sm active" onclick="filterDeptTable('all')">Todos</button>
+            <button class="btn btn-secondary btn-sm" onclick="filterDeptTable('admin')">Administración</button>
+            <button class="btn btn-secondary btn-sm" onclick="filterDeptTable('ventas')">Ventas</button>
+            <button class="btn btn-secondary btn-sm" onclick="filterDeptTable('soporte')">Soporte</button>
+            <button class="btn btn-secondary btn-sm" onclick="filterDeptTable('router')">Router 1941</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="data-table" id="table-ip-addressing">
+            <thead>
+              <tr>
+                <th>Departamento</th>
+                <th>Dispositivo</th>
+                <th>Interfaz</th>
+                <th>Dirección IPv4</th>
+                <th>Máscara de Subred</th>
+                <th>Default Gateway</th>
+                <th>Estado & Rol</th>
+              </tr>
+            </thead>
+            <tbody id="ip-table-body">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Interactive Ping & Gateway Simulator -->
+      <div class="layer-card">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-xs);">
+          Simulador Interactivo de Conectividad (Ping & Gateway)
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+          Experimenta las diferencias técnicas entre comunicación dentro de la misma LAN (solo Switch) y comunicación interdepartamental (requiere Router y Default Gateway).
+        </p>
+
+        <div class="grid-split">
+          <!-- Controls Panel -->
+          <div class="layer-card nested">
+            <div class="form-group">
+              <label class="form-label" for="sim-source-pc">Dispositivo Origen:</label>
+              <select id="sim-source-pc" class="form-select" onchange="runPingSimulation()">
+                <option value="PC0">PC0 · Administración (192.168.10.10)</option>
+                <option value="PC1">PC1 · Administración (192.168.10.11)</option>
+                <option value="PC2">PC2 · Ventas (192.168.20.10)</option>
+                <option value="PC4">PC4 · Soporte (192.168.10.30)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="sim-target-pc">Dispositivo Destino:</label>
+              <select id="sim-target-pc" class="form-select" onchange="runPingSimulation()">
+                <option value="PC1">PC1 · Administración (192.168.10.11)</option>
+                <option value="PC2" selected>PC2 · Ventas (192.168.20.10)</option>
+                <option value="PC3">PC3 · Ventas (192.168.20.11)</option>
+                <option value="PC0">PC0 · Administración (192.168.10.10)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="sim-gw-status">Estado de Configuración del Gateway en Origen:</label>
+              <select id="sim-gw-status" class="form-select" onchange="runPingSimulation()">
+                <option value="valid">Correcto (192.168.10.1 / 192.168.20.1)</option>
+                <option value="wrong">Erróneo / Inexistente (IP no asignada o incorrecta)</option>
+                <option value="none">Sin Gateway Configurado (En blanco)</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary" onclick="runPingSimulation()" style="width: 100%;">
+              <i data-lucide="play" style="width: 16px; height: 16px;"></i> Ejecutar Prueba de Ping
+            </button>
+          </div>
+
+          <!-- Simulation Live Output -->
+          <div class="terminal-box">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <div class="terminal-dot red"></div>
+                <div class="terminal-dot amber"></div>
+                <div class="terminal-dot green"></div>
+              </div>
+              <span class="terminal-title">Cisco Packet Tracer · Command Prompt Terminal</span>
+              <span class="tag neutral" style="font-size: 0.65rem;">ICMP Probe</span>
+            </div>
+            <div class="terminal-body" id="ping-terminal-output">
+              <!-- Live output -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Laboratory Quiz Section -->
+      <div class="layer-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-md);">
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Cuestionario Oficial de Laboratorio (Evaluación Interactiva)</h3>
+            <p style="font-size: 0.875rem; color: var(--on-surface-variant);">
+              Preguntas de control extraídas directamente del taller de redes de la Universidad del Tolima.
+            </p>
+          </div>
+          <div style="text-align: right;">
+            <span class="metric-label">Progreso Cuestionario</span>
+            <div id="quiz-t2-score" style="font-family: var(--font-label); font-size: 1.125rem; font-weight: 600; color: var(--primary);">0 / 4 Respondidas</div>
+          </div>
+        </div>
+
+        <div id="quiz-t2-container">
+          <!-- Quiz Item 1 -->
+          <div class="quiz-card" id="q-card-1">
+            <p class="quiz-question">1. ¿Por qué NO se necesita un router para la comunicación entre PC0 y PC1 en la red de Administración?</p>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="radio" name="q1" value="a" onchange="checkQuizAnswer(1, 'a', 'b')">
+                <span>Porque los equipos tienen direcciones IPv6 configuradas automáticamente.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="q1" value="b" onchange="checkQuizAnswer(1, 'b', 'b')">
+                <span>Porque ambos equipos pertenecen a la misma red local (LAN) y se comunican en Capa 2 a través del Switch mediante direcciones MAC.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="q1" value="c" onchange="checkQuizAnswer(1, 'c', 'b')">
+                <span>Porque el cable de red convierte los datos automáticamente sin necesidad de conmutación.</span>
+              </label>
+            </div>
+            <div class="quiz-feedback" id="q-feedback-1"></div>
+          </div>
+
+          <!-- Quiz Item 2 -->
+          <div class="quiz-card" id="q-card-2">
+            <p class="quiz-question">2. ¿Qué función cumple el Default Gateway configurado en los computadores?</p>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="radio" name="q2" value="a" onchange="checkQuizAnswer(2, 'a', 'a')">
+                <span>Actúa como la puerta de enlace predeterminada (IP de la interfaz del router) para enviar tráfico a destinos fuera de la subred local.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="q2" value="b" onchange="checkQuizAnswer(2, 'b', 'a')">
+                <span>Es la dirección que le otorga internet inalámbrico al computador.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="q2" value="c" onchange="checkQuizAnswer(2, 'c', 'a')">
+                <span>Es una dirección ficticia usada solo para pruebas de cableado.</span>
+              </label>
+            </div>
+            <div class="quiz-feedback" id="q-feedback-2"></div>
+          </div>
+
+          <!-- Quiz Item 3 -->
+          <div class="quiz-card" id="q-card-3">
+            <p class="quiz-question">3. ¿Qué sucede si el computador PC0 tiene configurado un Gateway incorrecto?</p>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="radio" name="q3" value="a" onchange="checkQuizAnswer(3, 'a', 'c')">
+                <span>El computador se apaga y se quema la tarjeta de red.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="q3" value="b" onchange="checkQuizAnswer(3, 'b', 'c')">
+                <span>No podrá comunicarse con ningún equipo, ni siquiera con los de su propia oficina local.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="q3" value="c" onchange="checkQuizAnswer(3, 'c', 'c')">
+                <span>Podrá comunicarse normalmente con su propia LAN local, pero NO podrá comunicarse con redes externas (como Ventas o Internet).</span>
+              </label>
+            </div>
+            <div class="quiz-feedback" id="q-feedback-3"></div>
+          </div>
+
+          <!-- Quiz Item 4 -->
+          <div class="quiz-card" id="q-card-4">
+            <p class="quiz-question">4. ¿Cuál es la diferencia técnica entre la dirección IP de Red y la dirección del Gateway?</p>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="radio" name="q4" value="a" onchange="checkQuizAnswer(4, 'a', 'b')">
+                <span>Son exactamente la misma dirección con nombres diferentes.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="q4" value="b" onchange="checkQuizAnswer(4, 'b', 'b')">
+                <span>La IP de red identifica a toda la agrupación (ej. 192.168.10.0) y no se asigna a ningún host; el Gateway es la IP activa real de la interfaz del router.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="q4" value="c" onchange="checkQuizAnswer(4, 'c', 'b')">
+                <span>El Gateway siempre termina en .255 y la de red en .1.</span>
+              </label>
+            </div>
+            <div class="quiz-feedback" id="q-feedback-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 4: TUTORÍA 3                          -->
+    <!-- ========================================== -->
+    <section id="view-t3" class="view-section">
+      <div class="section-header">
+        <span class="section-eyebrow">Tutoría 3 · Redundancia y Disponibilidad</span>
+        <h2 class="section-title">Spanning Tree Protocol (STP IEEE 802.1D), <strong>BPDUs & CLI</strong></h2>
+        <p class="section-lead">
+          En redes de conmutación Ethernet, la redundancia física de enlaces genera bucles de Capa 2 catastróficos (tormentas de difusión). El protocolo <strong>STP</strong> calcula un árbol de expansión libre de bucles eligiendo un <strong>Root Bridge</strong> y bloqueando puertos redundantes de forma dinámica.
+        </p>
+      </div>
+
+      <!-- Conceptual Grid: Storms & BPDUs -->
+      <div class="grid-3" style="margin-bottom: var(--space-xl);">
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+            <span class="tag red">Problema Crítico</span>
+            <i data-lucide="alert-triangle" style="color: var(--error); width: 18px; height: 18px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Tormentas de Difusión</h4>
+          <p style="font-size: 0.8125rem; color: var(--on-surface-variant);">
+            Debido a que las tramas Ethernet carecen de un campo TTL (Time to Live), las difusiones en bucles físicos circulan infinitamente. Esto satura los buffers de conmutación, colapsa el ancho de banda y congela todos los switches.
+          </p>
+        </div>
+
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+            <span class="tag">Mecanismo Clave</span>
+            <i data-lucide="mail" style="color: var(--primary); width: 18px; height: 18px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Tramas BPDU</h4>
+          <p style="font-size: 0.8125rem; color: var(--on-surface-variant);">
+            <strong>Bridge Protocol Data Unit</strong>: Paquetes de control que los conmutadores intercambian cada 2 segundos. Contienen el Bridge ID (Priority + MAC), el costo hacia la raíz y el Port ID para estructurar la topología lógica.
+          </p>
+        </div>
+
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+            <span class="tag green">Regla de Elección</span>
+            <i data-lucide="crown" style="color: var(--tertiary); width: 18px; height: 18px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Elección del ROOT BRIDGE</h4>
+          <p style="font-size: 0.8125rem; color: var(--on-surface-variant);">
+            El switch con el <strong>menor BID</strong> gana la raíz. Primero se compara la Prioridad (por defecto 32768, en múltiplos de 4096). Si hay empate, el desempate lo define la <strong>menor dirección física MAC</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive STP Root Bridge Simulator -->
+      <div class="layer-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Simulador de Topología Triangular & Elección de Puente Raíz</h3>
+            <p style="font-size: 0.875rem; color: var(--on-surface-variant);">
+              Tres switches conectados en triángulo idéntico al laboratorio. Modifica las prioridades o fuerza a S3 como Root Bridge.
+            </p>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="forceS3AsRootBridge()">
+            <i data-lucide="zap" style="width: 14px; height: 14px;"></i> Forzar S3 como Root Bridge (CLI Command)
+          </button>
+        </div>
+
+        <div class="grid-split">
+          <!-- Interactive Diagram Canvas -->
+          <div class="svg-diagram-wrapper" style="position: relative;">
+            <svg id="stp-svg-canvas" class="svg-canvas" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+              <!-- Rendered via JS -->
+            </svg>
+            <div id="stp-root-alert" style="position: absolute; bottom: var(--space-sm); left: var(--space-sm); right: var(--space-sm); background-color: var(--background); border: var(--rule); padding: var(--space-xs) var(--space-sm); font-size: 0.75rem; font-family: var(--font-label); display: flex; justify-content: space-between; align-items: center;">
+              <span>ESTADO STP: Convergencia lograda</span>
+              <span id="stp-status-txt" style="color: var(--tertiary); font-weight: 600;">Topología sin bucles</span>
+            </div>
+          </div>
+
+          <!-- Configuration and BID Controls -->
+          <div class="layer-card nested">
+            <h4 style="font-size: 0.9375rem; font-weight: 600; margin-bottom: var(--space-sm); border-bottom: var(--rule); padding-bottom: var(--space-xs);">
+              Parámetros de Bridge ID (BID)
+            </h4>
+
+            <!-- S1 Controls -->
+            <div style="margin-bottom: var(--space-sm);">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8125rem;">
+                <strong>Switch 1 (S1)</strong>
+                <span class="mono-cell" style="color: var(--on-surface-variant);">MAC: 0001.42A1.1111</span>
+              </div>
+              <div style="display: flex; gap: var(--space-xs); align-items: center; margin-top: 4px;">
+                <label class="form-label" style="margin:0; font-size: 0.7rem;">Prioridad:</label>
+                <select id="s1-priority" class="form-select" style="height: 32px; padding: 0 8px; font-size: 0.8125rem;" onchange="updateSTPState()">
+                  <option value="4096">4096</option>
+                  <option value="24576">24576</option>
+                  <option value="32768" selected>32768 (Default)</option>
+                  <option value="61440">61440</option>
+                </select>
+                <span id="s1-badge" class="tag neutral">Esclavo</span>
+              </div>
+            </div>
+
+            <!-- S2 Controls -->
+            <div style="margin-bottom: var(--space-sm);">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8125rem;">
+                <strong>Switch 2 (S2)</strong>
+                <span class="mono-cell" style="color: var(--on-surface-variant);">MAC: 0001.42A1.2222</span>
+              </div>
+              <div style="display: flex; gap: var(--space-xs); align-items: center; margin-top: 4px;">
+                <label class="form-label" style="margin:0; font-size: 0.7rem;">Prioridad:</label>
+                <select id="s2-priority" class="form-select" style="height: 32px; padding: 0 8px; font-size: 0.8125rem;" onchange="updateSTPState()">
+                  <option value="4096">4096</option>
+                  <option value="24576">24576</option>
+                  <option value="32768" selected>32768 (Default)</option>
+                  <option value="61440">61440</option>
+                </select>
+                <span id="s2-badge" class="tag neutral">Esclavo</span>
+              </div>
+            </div>
+
+            <!-- S3 Controls -->
+            <div style="margin-bottom: var(--space-md);">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8125rem;">
+                <strong>Switch 3 (S3)</strong>
+                <span class="mono-cell" style="color: var(--on-surface-variant);">MAC: 0001.42A1.3333</span>
+              </div>
+              <div style="display: flex; gap: var(--space-xs); align-items: center; margin-top: 4px;">
+                <label class="form-label" style="margin:0; font-size: 0.7rem;">Prioridad:</label>
+                <select id="s3-priority" class="form-select" style="height: 32px; padding: 0 8px; font-size: 0.8125rem;" onchange="updateSTPState()">
+                  <option value="4096">4096</option>
+                  <option value="24576">24576 (spanning-tree vlan 1 root primary)</option>
+                  <option value="32768" selected>32768 (Default)</option>
+                  <option value="61440">61440</option>
+                </select>
+                <span id="s3-badge" class="tag neutral">Esclavo</span>
+              </div>
+            </div>
+
+            <!-- Election Explanation -->
+            <div style="background-color: var(--background); border: var(--rule); padding: var(--space-sm); font-size: 0.8125rem;">
+              <strong style="color: var(--primary);">Diagnóstico de Elección:</strong>
+              <p id="stp-explanation" style="margin-top: 4px; color: var(--on-surface-variant);"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cisco CLI Terminal Simulator -->
+      <div class="layer-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+          <h3 style="font-size: 1.125rem; font-weight: 600;">Consola Interactiva Cisco IOS CLI (Switch 2960)</h3>
+          <span class="tag">Simulador IOS</span>
+        </div>
+        <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+          Ejecuta los comandos reales del laboratorio para inspeccionar el árbol de expansión o configurar el switch.
+        </p>
+
+        <div class="terminal-box">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot amber"></div>
+              <div class="terminal-dot green"></div>
+            </div>
+            <span class="terminal-title">Switch3# - Cisco IOS Software (C2960-LANBASEK9-M)</span>
+            <span class="mono-cell" style="font-size: 0.7rem; color: var(--on-terminal-muted);">Puerto Consola TTY 0</span>
+          </div>
+          
+          <div class="terminal-body" id="stp-cli-output">Switch3> enable
+Switch3# show spanning-tree
+VLAN0001
+  Spanning tree enabled protocol ieee
+  Root ID    Priority    32769
+             Address     0001.42A1.1111
+             Cost        19
+             Port        1 (FastEthernet0/1)
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
+             Address     0001.42A1.3333
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time  300
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Fa0/1            Root FWD 19        128.1    P2p
+Fa0/2            Altn BLK 19        128.2    P2p</div>
+
+          <div class="terminal-actions">
+            <span class="terminal-prompt-sym" style="font-size: 0.8125rem; margin-right: 4px;">Comandos:</span>
+            <button class="btn-terminal" onclick="runCLICommand('show spanning-tree')">show spanning-tree</button>
+            <button class="btn-terminal" onclick="runCLICommand('spanning-tree vlan 1 root primary')">spanning-tree vlan 1 root primary</button>
+            <button class="btn-terminal" onclick="runCLICommand('show mac address-table')">show mac address-table</button>
+            <button class="btn-terminal" onclick="runCLICommand('show ip interface brief')">show ip interface brief</button>
+            <button class="btn-terminal" onclick="runCLICommand('clear')">Limpiar Pantalla</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 5: TUTORÍA 4                          -->
+    <!-- ========================================== -->
+    <section id="view-t4" class="view-section">
+      <div class="section-header">
+        <span class="section-eyebrow">Tutoría 4 · Enrutamiento de Capa 3</span>
+        <h2 class="section-title">Enrutamiento Estático vs <strong>Dinámico RIP & Tablas de Ruteo</strong></h2>
+        <p class="section-lead">
+          El enrutamiento es el proceso de selección de las mejores rutas en cualquier red. Compara la configuración estática manual con el protocolo dinámico de vector distancia <strong>RIP (Routing Information Protocol)</strong> y analiza las tablas de enrutamiento Cisco.
+        </p>
+      </div>
+
+      <!-- Comparative Cards: Static vs Dynamic -->
+      <div class="grid-2" style="margin-bottom: var(--space-xl);">
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+            <h4 style="font-size: 1.125rem; font-weight: 600;">Enrutamiento Estático</h4>
+            <span class="tag neutral">Manual</span>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-sm);">
+            El administrador de red define manualmente cada camino mediante el comando <code>ip route &lt;red&gt; &lt;máscara&gt; &lt;siguiente_salto&gt;</code>.
+          </p>
+          <ul style="font-size: 0.8125rem; color: var(--on-surface-variant); padding-left: var(--space-md); display: flex; flex-direction: column; gap: 4px;">
+            <li><strong>Ventajas:</strong> Sin consumo de ancho de banda ni CPU para anuncios de protocolo; alta seguridad y control total del tráfico.</li>
+            <li><strong>Inconvenientes:</strong> No se adapta automáticamente a caídas de enlaces; requiere intervención manual para rutas alternativas.</li>
+            <li><strong>Escalabilidad:</strong> Extremadamente baja; inviable en topologías grandes con decenas de subredes.</li>
+            <li><strong>Distancia Administrativa (AD):</strong> 1 (alta confiabilidad frente a protocolos dinámicos).</li>
+          </ul>
+        </div>
+
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+            <h4 style="font-size: 1.125rem; font-weight: 600;">Enrutamiento Dinámico (RIP)</h4>
+            <span class="tag">Vector Distancia</span>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-sm);">
+            Los routers intercambian sus tablas periódicamente y aprenden rutas automáticamente mediante el protocolo RIP.
+          </p>
+          <ul style="font-size: 0.8125rem; color: var(--on-surface-variant); padding-left: var(--space-md); display: flex; flex-direction: column; gap: 4px;">
+            <li><strong>Métrica:</strong> Conteo de saltos (Hop Count). Límite máximo de 15 saltos (16 se considera inalcanzable).</li>
+            <li><strong>Adaptabilidad:</strong> Si un enlace cae, converge automáticamente buscando caminos alternativos sin apagar la red.</li>
+            <li><strong>Comando Clave Cisco:</strong> <code>router rip</code>, <code>version 2</code>, <code>no auto-summary</code>, <code>network &lt;red_con_clase&gt;</code>.</li>
+            <li><strong>Distancia Administrativa (AD):</strong> 120 (menor preferencia comparado con OSPF o Estático).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Interactive Routing Table Inspector -->
+      <div class="layer-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Inspector Interactivo de Tabla de Enrutamiento (`show ip route`)</h3>
+            <p style="font-size: 0.875rem; color: var(--on-surface-variant);">
+              Filtra las rutas aprendidas en Router 4 y analiza el significado de sus códigos de protocolo.
+            </p>
+          </div>
+          <div style="display: flex; gap: var(--space-xs);" id="route-filter-btns">
+            <button class="btn btn-secondary btn-sm active" onclick="filterRoutes('all')">Todas</button>
+            <button class="btn btn-secondary btn-sm" onclick="filterRoutes('C')">Directas (C)</button>
+            <button class="btn btn-secondary btn-sm" onclick="filterRoutes('S')">Estáticas (S)</button>
+            <button class="btn btn-secondary btn-sm" onclick="filterRoutes('R')">Dinámicas RIP (R)</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Red de Destino</th>
+                <th>Métrica / Distancia AD</th>
+                <th>Siguiente Salto (Next Hop)</th>
+                <th>Interfaz de Salida</th>
+                <th>Tipo de Aprendizaje</th>
+              </tr>
+            </thead>
+            <tbody id="routing-table-body">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-title">Importancia del comando 'no auto-summary' en RIP</div>
+          <p style="font-size: 0.8125rem;">
+            Por defecto, el protocolo RIP v1/v2 resume las redes a sus límites de clase con clase (Classful: A, B o C). Al aplicar <code>no auto-summary</code>, el router anuncia las subredes con sus máscaras VLSM reales, evitando desvíos y bucles de enrutamiento erróneos en la topología.
+          </p>
+        </div>
+      </div>
+
+      <!-- Link Failure & Convergence Simulation -->
+      <div class="layer-card">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-xs);">
+          Simulador de Caída de Enlace & Tolerancia a Fallos
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+          Observa qué ocurre cuando el enlace primario entre Router 4 y Router 5 sufre un corte físico.
+        </p>
+
+        <div class="grid-split">
+          <div class="layer-card nested">
+            <div class="form-group">
+              <label class="form-label">Protocolo Configurado:</label>
+              <select id="sim-failover-proto" class="form-select" onchange="runFailoverSimulation()">
+                <option value="rip" selected>Dinámico: RIPv2 (Convergencia Automática)</option>
+                <option value="static">Estático Simple (Sin ruta de respaldo configurada)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Estado del Enlace Primario (192.168.70.0/24):</label>
+              <select id="sim-failover-link" class="form-select" onchange="runFailoverSimulation()">
+                <option value="up" selected>Operativo (UP / UP)</option>
+                <option value="down">Enlace Caído / Cortado (DOWN / DOWN)</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary" onclick="runFailoverSimulation()" style="width: 100%;">
+              Comprobar Tráfico & Enrutamiento
+            </button>
+          </div>
+
+          <div class="layer-card nested" id="failover-result-box" style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-xs);">
+              <span class="tag green" id="failover-tag">Enlace Activo</span>
+              <h4 id="failover-title" style="font-size: 1rem; font-weight: 600;">Tráfico Fluido por Enlace Primario</h4>
+            </div>
+            <p id="failover-desc" style="font-size: 0.8125rem; color: var(--on-surface-variant); margin-bottom: var(--space-sm);">
+              Los paquetes viajan directamente a través del siguiente salto 192.168.70.2 con métrica óptima de 1 salto.
+            </p>
+            <div class="mono-cell" id="failover-path" style="background-color: var(--background); border: var(--rule); padding: var(--space-xs) var(--space-sm); font-size: 0.75rem;">
+              Ruta Actual: R4 [Fa0/0] ---> [192.168.70.0/24] ---> R5 [Fa0/0] (Latencia: 1ms)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 6: TUTORÍA 5                          -->
+    <!-- ========================================== -->
+    <section id="view-t5" class="view-section">
+      <div class="section-header">
+        <span class="section-eyebrow">Tutoría 5 · Protocolo de Estado de Enlace</span>
+        <h2 class="section-title">Open Shortest Path First <strong>(OSPF Área 0, Costo & Lab Video)</strong></h2>
+        <p class="section-lead">
+          <strong>OSPF</strong> es un protocolo de enrutamiento dinámico interior abierto (RFC 2328) basado en el estado de los enlaces y en el algoritmo SPF de Dijkstra. Divide la red en áreas jerárquicas interconectadas al <strong>Área 0 (Backbone)</strong> y calcula la mejor ruta mediante la métrica de costo basada en el ancho de banda.
+        </p>
+      </div>
+
+      <!-- OSPF Core Pillars -->
+      <div class="grid-3" style="margin-bottom: var(--space-xl);">
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+            <span class="tag">Estándar Abierto</span>
+            <i data-lucide="globe" style="color: var(--primary); width: 18px; height: 18px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Interoperabilidad Total</h4>
+          <p style="font-size: 0.8125rem; color: var(--on-surface-variant);">
+            Al no ser propietario, OSPF permite comunicar routers Cisco con firewalls Fortigate, routers Juniper o servidores Linux sin ninguna incompatibilidad de protocolo.
+          </p>
+        </div>
+
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+            <span class="tag green">Algoritmo Dijkstra</span>
+            <i data-lucide="git-commit" style="color: var(--tertiary); width: 18px; height: 18px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">LSDB & SPF</h4>
+          <p style="font-size: 0.8125rem; color: var(--on-surface-variant);">
+            Intercambia paquetes <strong>Hello</strong> (multicast 224.0.0.5) y anuncios <strong>LSA</strong>. Todos los routers del área construyen una base topológica (LSDB) idéntica y calculan caminos sin bucles.
+          </p>
+        </div>
+
+        <div class="layer-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xs);">
+            <span class="tag amber">AD = 110</span>
+            <i data-lucide="activity" style="color: #8f6b00; width: 18px; height: 18px;"></i>
+          </div>
+          <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs);">Métrica de Costo</h4>
+          <p style="font-size: 0.8125rem; color: var(--on-surface-variant);">
+            A diferencia de RIP (que solo cuenta saltos ciegos), OSPF premia la velocidad: <code>Costo = Ancho de Banda de Referencia (10⁸ bps) / Ancho de Banda de la Interfaz (bps)</code>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive OSPF Cost Calculator -->
+      <div class="layer-card">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-xs);">
+          Calculadora Dinámica de Costo OSPF vs Salto RIP
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+          Descubre por qué OSPF es infinitamente superior a los protocolos de vector distancia al seleccionar rutas por capacidad real de transferencia.
+        </p>
+
+        <div class="grid-split">
+          <div class="layer-card nested">
+            <div class="form-group">
+              <label class="form-label" for="calc-iface-type">Tipo de Interfaz Física:</label>
+              <select id="calc-iface-type" class="form-select" onchange="calculateOSPFMetric()">
+                <option value="10000000000">10 Gigabit Ethernet (10 Gbps)</option>
+                <option value="1000000000" selected>Gigabit Ethernet (1000 Mbps - 1 Gbps)</option>
+                <option value="100000000">Fast Ethernet (100 Mbps)</option>
+                <option value="10000000">Ethernet Estándar (10 Mbps)</option>
+                <option value="1544000">Línea Serial T1 (1.544 Mbps)</option>
+                <option value="64000">Enlace Dial-up / Módem (64 Kbps)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="calc-ref-bw">Ancho de Banda de Referencia Cisco:</label>
+              <input type="text" id="calc-ref-bw" class="form-input mono-cell" value="100,000,000 bps (100 Mbps)" readonly>
+            </div>
+
+            <div style="font-size: 0.8125rem; color: var(--on-surface-variant);">
+              Fórmula Oficial RFC 2328: <code>Costo = 10^8 / BW (bps)</code>
+            </div>
+          </div>
+
+          <!-- Calculation Result -->
+          <div class="layer-card nested" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="metric-label">Costo Calculado por OSPF</span>
+              <div id="calc-cost-display" class="metric-value" style="color: var(--primary); margin: var(--space-xs) 0;">1</div>
+              <p id="calc-cost-explanation" style="font-size: 0.8125rem; color: var(--on-surface-variant);"></p>
+            </div>
+
+            <div style="border-top: var(--rule); padding-top: var(--space-sm); font-size: 0.8125rem;">
+              <strong>Diferencia con RIP:</strong>
+              <p id="calc-rip-comparison" style="margin-top: 2px; color: var(--on-surface-variant);"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube Lab Video Player & Notes -->
+      <div class="layer-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Laboratorio Práctico en Video: Configuración OSPF en Packet Tracer</h3>
+            <p style="font-size: 0.875rem; color: var(--on-surface-variant);">
+              Video explicativo: <em>"OSPF Explicado en 5 Minutos | Laboratorio Rápido en Cisco Packet Tracer"</em> (Pedro Lino Cáceres).
+            </p>
+          </div>
+          <span class="tag highlight"><i data-lucide="play-circle" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> Video ID: -Hc_89bX4RM</span>
+        </div>
+
+        <div class="grid-split">
+          <!-- Video Iframe -->
+          <div>
+            <div class="video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/-Hc_89bX4RM" 
+                title="OSPF Explicado en 5 Minutos | Laboratorio Rápido en Cisco Packet Tracer" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--on-surface-variant); font-family: var(--font-label);">
+              Reproductor integrado del laboratorio de enrutamiento OSPF en Cisco Packet Tracer.
+            </p>
+          </div>
+
+          <!-- Video Chapter Notes & Commands Checklist -->
+          <div class="layer-card nested" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h4 style="font-size: 0.9375rem; font-weight: 600; margin-bottom: var(--space-sm); border-bottom: var(--rule); padding-bottom: var(--space-xs);">
+                Guía de Configuración Paso a Paso (Packet Tracer)
+              </h4>
+
+              <div style="display: flex; flex-direction: column; gap: var(--space-xs); font-size: 0.8125rem;">
+                <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">00:00</span>
+                  <div><strong>Conceptos:</strong> Protocolo estado de enlace, estándar abierto e intercambio de LSAs.</div>
+                </div>
+                <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">01:15</span>
+                  <div><strong>Métrica:</strong> Costo en función del ancho de banda vs saltos de RIP. AD = 110.</div>
+                </div>
+                <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">02:00</span>
+                  <div><strong>Áreas:</strong> Definición del Área Backbone 0 y sincronización de LSDB.</div>
+                </div>
+                <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">03:00</span>
+                  <div><strong>CLI R1:</strong> <code>router ospf 1</code>, <code>network 10.10.1.0 0.0.0.255 area 0</code></div>
+                </div>
+                <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">04:30</span>
+                  <div><strong>Verificación:</strong> Paquetes Hello, <code>show ip route</code> y conectividad ping exitosa.</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="border-top: var(--rule); padding-top: var(--space-sm); margin-top: var(--space-sm);">
+              <span class="form-label" style="display: block; margin-bottom: 4px;">Comandos IOS de R1 para Copiar:</span>
+              <pre class="mono-cell" style="background-color: var(--surface-terminal); color: var(--on-terminal); padding: 8px; font-size: 0.72rem; overflow-x: auto;">Router# configure terminal
+Router(config)# hostname R1
+R1(config)# router ospf 1
+R1(config-router)# network 10.10.1.0 0.0.0.255 area 0
+R1(config-router)# network 192.168.12.0 0.0.0.255 area 0
+R1(config-router)# end</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integrated Final Knowledge Check -->
+      <div class="layer-card">
+        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-xs);">
+          Evaluación Integradora de Conocimientos (CIPAS ERROR 404)
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
+          Valida tu dominio sobre todas las tutorías del curso. Al completar las 3 preguntas obtendrás tu dictamen de aprendizaje.
+        </p>
+
+        <div id="final-quiz-container">
+          <!-- Final Q1 -->
+          <div class="quiz-card" id="fq-card-1">
+            <p class="quiz-question">1. En el diseño de redes, si una universidad planea duplicar sus estudiantes en 5 años, ¿qué principio es prioritario?</p>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="radio" name="fq1" value="a" onchange="checkFinalQuiz(1, 'a', 'b')">
+                <span>Redundancia simple cambiando todos los cables por cobre Cat 3.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="fq1" value="b" onchange="checkFinalQuiz(1, 'b', 'b')">
+                <span>Escalabilidad: Diseño modular por capas para absorber el crecimiento sin degradar servicios.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="fq1" value="c" onchange="checkFinalQuiz(1, 'c', 'b')">
+                <span>Seguridad estricta apagando los conmutadores centrales los fines de semana.</span>
+              </label>
+            </div>
+            <div class="quiz-feedback" id="fq-feedback-1"></div>
+          </div>
+
+          <!-- Final Q2 -->
+          <div class="quiz-card" id="fq-card-2">
+            <p class="quiz-question">2. ¿Por qué OSPF elige un enlace de 1 Gbps sobre un enlace de 64 Kbps aunque el de 64 Kbps tenga 1 salto menos?</p>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="radio" name="fq2" value="a" onchange="checkFinalQuiz(2, 'a', 'a')">
+                <span>Porque OSPF calcula la ruta con base en el Costo (ancho de banda) y no en el conteo de saltos como RIP.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="fq2" value="b" onchange="checkFinalQuiz(2, 'b', 'a')">
+                <span>Porque el protocolo RIP bloquea los enlaces seriales de manera obligatoria.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="fq2" value="c" onchange="checkFinalQuiz(2, 'c', 'a')">
+                <span>Porque las direcciones IP de 1 Gbps siempre son más pequeñas en el sistema hexadecimal.</span>
+              </label>
+            </div>
+            <div class="quiz-feedback" id="fq-feedback-2"></div>
+          </div>
+
+          <!-- Final Q3 -->
+          <div class="quiz-card" id="fq-card-3">
+            <p class="quiz-question">3. ¿Cuál es la función obligatoria del Área 0 (Backbone Area) en una red jerárquica OSPF?</p>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="radio" name="fq3" value="a" onchange="checkFinalQuiz(3, 'a', 'c')">
+                <span>Conectar únicamente computadores portátiles mediante enlaces WiFi.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="fq3" value="b" onchange="checkFinalQuiz(3, 'b', 'c')">
+                <span>Apagar las interfaces que no tengan tráfico durante más de 30 minutos.</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="fq3" value="c" onchange="checkFinalQuiz(3, 'c', 'c')">
+                <span>Servir como el núcleo central de interconexión al cual todas las demás áreas deben conectarse para intercambiar rutas.</span>
+              </label>
+            </div>
+            <div class="quiz-feedback" id="fq-feedback-3"></div>
+          </div>
+        </div>
+
+        <div id="final-certificate-box" style="display: none; background-color: var(--primary-container); border: 2px solid var(--primary); padding: var(--space-lg); margin-top: var(--space-md);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm);">
+            <div>
+              <span class="tag" style="background-color: var(--primary); color: #fff;">Certificación Académica</span>
+              <h4 style="font-size: 1.25rem; font-weight: 600; margin: var(--space-xs) 0; color: var(--on-primary-container);">
+                ¡Evaluación Integradora Superada con Éxito!
+              </h4>
+              <p style="font-size: 0.875rem; color: var(--on-primary-container);">
+                Has demostrado dominio completo en Fundamentos LAN, Direccionamiento IPv4, Redundancia STP, Enrutamiento RIP y Arquitectura OSPF.
+              </p>
+            </div>
+            <div style="text-align: right;">
+              <span class="mono-cell" style="font-size: 0.75rem; color: var(--on-primary-container);">VALIDADO POR:</span><br>
+              <strong style="color: var(--on-primary-container);">CIPAS ERROR 404</strong><br>
+              <span style="font-size: 0.75rem; color: var(--on-primary-container);">Universidad del Tolima (2026)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Page Footer -->
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <div class="footer-credits">
+        <strong>Universidad del Tolima — IDEAD CAT Suba</strong>
+        <span>Ingeniería en Sistemas · Asignatura: Diseño de Redes (2026)</span>
+        <span>CIPAS ERROR 404: Diego Mauricio Fuentes Sanabria & Laura Yulisa Mejía Velásquez</span>
+      </div>
+      <div style="text-align: right; display: flex; flex-direction: column; gap: 4px;">
+        <span class="tag neutral">Docente Tutora: Diana Marcela Cruz Suarez</span>
+        <span class="mono-cell" style="font-size: 0.7rem;">Cisco Packet Tracer v8.x Compatible</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Gemini Notebook Shim API for State Persistence -->
+<api-shim></api-shim>
+
+<script src="app.js"></script>
+
+</body>
+</html>
