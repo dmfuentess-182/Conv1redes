@@ -25,46 +25,51 @@
   <header class="masthead">
     <div class="masthead-inner">
       <div class="brand-block">
-        <span class="brand-sub">Universidad del Tolima · IDEAD - CAT Suba · Ingeniería de Sistemas</span>
-        <h1 class="brand-title">Diseño de Redes — Resumen Interactivo</h1>
+        <span class="brand-sub">Universidad del Tolima · IDEAD CAT Suba · Ingeniería de Sistemas</span>
+        <h1 class="brand-title">Diseño de Redes — Plataforma Académica Interactiva</h1>
       </div>
       <div class="meta-badges">
         <span class="badge-tag highlight"><i data-lucide="shield-check" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px;"></i> CIPAS ERROR 404</span>
-        <span class="badge-tag">Docente: Diana Marcela Cruz Suarez</span>
+        <span class="badge-tag">TUTORA: Diana Marcela Cruz Suarez</span>
         <span class="badge-tag">Bogotá D.C. · 2026</span>
       </div>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-menu">
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+      </button>
+    </div>
+
+    <!-- Menú desplegable de navegación -->
+    <div class="menu-panel-wrap">
+      <nav class="menu-panel" id="main-menu" aria-label="Navegación del Curso">
+          <button class="menu-item active" id="nav-home" onclick="navigateTo('home')">
+            <i data-lucide="layout-grid" style="width:16px;height:16px;"></i>
+            <span>Inicio</span>
+          </button>
+          <button class="menu-item" id="nav-t1" onclick="navigateTo('t1')">
+            <i data-lucide="layers" style="width:16px;height:16px;"></i>
+            <span>Tutoría 1: LAN & Modelos</span>
+          </button>
+          <button class="menu-item" id="nav-t2" onclick="navigateTo('t2')">
+            <i data-lucide="binary" style="width:16px;height:16px;"></i>
+            <span>Tutoría 2: Direccionamiento LAN</span>
+          </button>
+          <button class="menu-item" id="nav-t3" onclick="navigateTo('t3')">
+            <i data-lucide="git-fork" style="width:16px;height:16px;"></i>
+            <span>Tutoría 3: Redundancia STP</span>
+          </button>
+          <button class="menu-item" id="nav-t4" onclick="navigateTo('t4')">
+            <i data-lucide="route" style="width:16px;height:16px;"></i>
+            <span>Tutoría 4: Enrutamiento RIP</span>
+          </button>
+          <button class="menu-item" id="nav-t5" onclick="navigateTo('t5')">
+            <i data-lucide="network" style="width:16px;height:16px;"></i>
+            <span>Tutoría 5: OSPF & Lab Video</span>
+          </button>
+      </nav>
     </div>
   </header>
-
-  <!-- Sticky Horizontal Navigation -->
-  <nav class="navbar-container" aria-label="Navegación del Curso">
-    <div class="navbar-inner">
-      <button class="nav-btn active" id="nav-home" onclick="navigateTo('home')">
-        <i data-lucide="layout-grid" style="width:16px;height:16px;"></i>
-        <span>Home</span>
-      </button>
-      <button class="nav-btn" id="nav-t1" onclick="navigateTo('t1')">
-        <i data-lucide="layers" style="width:16px;height:16px;"></i>
-        <span>Tutoría 1: LAN & Modelos</span>
-      </button>
-      <button class="nav-btn" id="nav-t2" onclick="navigateTo('t2')">
-        <i data-lucide="binary" style="width:16px;height:16px;"></i>
-        <span>Tutoría 2: Direccionamiento LAN</span>
-      </button>
-      <button class="nav-btn" id="nav-t3" onclick="navigateTo('t3')">
-        <i data-lucide="git-fork" style="width:16px;height:16px;"></i>
-        <span>Tutoría 3: Redundancia STP</span>
-      </button>
-      <button class="nav-btn" id="nav-t4" onclick="navigateTo('t4')">
-        <i data-lucide="route" style="width:16px;height:16px;"></i>
-        <span>Tutoría 4: Enrutamiento RIP</span>
-      </button>
-      <button class="nav-btn" id="nav-t5" onclick="navigateTo('t5')">
-        <i data-lucide="network" style="width:16px;height:16px;"></i>
-        <span>Tutoría 5: OSPF & Lab Video</span>
-      </button>
-    </div>
-  </nav>
 
   <!-- Main Content Views -->
   <main class="page-main">
@@ -74,16 +79,40 @@
     <!-- ========================================== -->
     <section id="view-home" class="view-section active">
       <div class="section-header">
-        <span class="section-eyebrow">Resumen de tutorias vistas</span>
-        <h2 class="section-title"><strong>Diseño de Redes</strong></h2>
+        <span class="section-eyebrow">Portal Principal · Curso Integrado</span>
+        <h2 class="section-title">Diseño y Arquitectura de <strong>Redes de Datos</strong></h2>
         <p class="section-lead">
-          La presente plataforma teórica preneta un resumen de los visto en las tutorias 1,2,3,4 y 5 desarrollada por el <strong>CIPAS ERROR 404</strong> para la asignatura de Diseño de Redes. Se presentan los fundamentos de capas OSI/TCP-IP, direccionamiento IPv4, alta disponibilidad con STP, enrutamiento estático vs dinámico (RIP) y protocolos de estado de enlace (OSPF).
+          Plataforma teórica y de simulación práctica desarrollada por el <strong>CIPAS ERROR 404</strong> para la asignatura de Diseño de Redes. Comprende los fundamentos de capas OSI/TCP-IP, direccionamiento IPv4, alta disponibilidad con STP, enrutamiento estático vs dinámico (RIP) y protocolos de estado de enlace (OSPF).
         </p>
       </div>
 
+      <!-- Overview Metrics -->
+      <div class="grid-4" style="margin-bottom: var(--space-xl);">
+        <div class="metric-tile key-tile">
+          <span class="metric-label">Módulos de Tutoría</span>
+          <span class="metric-value">5 Unidades</span>
+          <span class="metric-desc">Teoría estructurada y talleres prácticos</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Modelo de Referencia</span>
+          <span class="metric-value">7 Capas OSI</span>
+          <span class="metric-desc">Mapeado a la arquitectura TCP/IP de 4 capas</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Alta Disponibilidad</span>
+          <span class="metric-value">IEEE 802.1D</span>
+          <span class="metric-desc">Eliminación de bucles con Spanning Tree</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Enrutamiento Avanzado</span>
+          <span class="metric-value">OSPF Área 0</span>
+          <span class="metric-desc">Algoritmo Dijkstra y métrica por costo</span>
+        </div>
+      </div>
+
       <!-- Quick Access Modules Grid -->
-      <h3 style="font-size: 2.5rem; font-weight: 600; margin-bottom: var(--space-md); border-bottom: var(--rule); padding-bottom: var(--space-xs);">
-        Tutorias
+      <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-md); border-bottom: var(--rule); padding-bottom: var(--space-xs);">
+        Módulos Académicos de Aprendizaje
       </h3>
 
       <div class="grid-3" style="margin-bottom: var(--space-xl);">
@@ -165,7 +194,7 @@
         <!-- Card Course Info -->
         <div class="layer-card" style="background-color: var(--primary-container); border-color: var(--primary);">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-sm);">
-            <span class="tag" style="background-color: var(--primary); color: #fff;">Presentado por:</span>
+            <span class="tag" style="background-color: var(--primary); color: #fff;">Ficha Técnica</span>
             <i data-lucide="award" style="color: var(--primary); width: 20px; height: 20px;"></i>
           </div>
           <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: var(--space-xs); color: var(--on-primary-container);">
@@ -173,8 +202,8 @@
           </h4>
           <p style="font-size: 0.8125rem; color: var(--on-primary-container); margin-bottom: var(--space-sm);">
             <strong>Integrantes:</strong><br>
-            • Diego Mauricio Fuentes Sanabria<br>
-            • Laura Yulisa Mejía Velásquez<br>
+            • Diego Mauricio Fuentes Sanabria (085451012024)<br>
+            • Laura Yulisa Mejía Velásquez (085451112024)<br>
             <strong>Programa:</strong> Ingeniería de Sistemas<br>
             <strong>Sede:</strong> IDEAD CAT Suba, Bogotá D.C.
           </p>
@@ -185,7 +214,7 @@
       <!-- Cisco Enterprise Technology Context -->
       <div class="layer-card" style="margin-bottom: var(--space-xl);">
         <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-xs);">
-          Beneficios y Relevancia de aprender a usar Cisco en Entornos Corporativos
+          Beneficios y Relevancia de la Tecnología Cisco en Entornos Corporativos
         </h3>
         <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: var(--space-md);">
           Las redes de telecomunicaciones modernas requieren estándares rigurosos de disponibilidad, escalabilidad y seguridad. La adopción de la arquitectura y hardware Cisco aporta ventajas críticas:
