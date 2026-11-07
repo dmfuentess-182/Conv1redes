@@ -946,3 +946,131 @@
       scroll-behavior: auto !important;
     }
   }
+
+  /* =====================================================================
+     NUEVO: footer con logo, bloque de video/notas y visor de PDF
+     ===================================================================== */
+
+  /* Footer con logo */
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .footer-logo {
+    height: 64px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  /* Video + panel de notas con la misma altura */
+  .video-split {
+    grid-template-columns: 3fr 2fr;
+    align-items: stretch;
+  }
+
+  .video-split .video-wrapper {
+    margin-bottom: 0;
+  }
+
+  .video-side {
+    position: relative;
+    min-height: 320px;
+  }
+
+  .video-notes {
+    position: absolute;
+    inset: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .video-notes-steps {
+    flex: 0 1 auto;
+    max-height: 50%;
+    overflow-y: auto;
+    min-height: 0;
+  }
+
+  .video-notes-code {
+    flex: 1 1 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    border-top: var(--rule);
+    padding-top: var(--space-sm);
+    margin-top: var(--space-sm);
+  }
+
+  /* Código R1 / R2 con scroll vertical */
+  .video-code {
+    flex: 1 1 0;
+    min-height: 80px;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+
+  /* Visor de PDF */
+  .pdf-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .pdf-viewer {
+    width: 100%;
+    height: 700px;
+    background-color: var(--background);
+    border: var(--rule);
+  }
+
+  .pdf-viewer object {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .pdf-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    height: 100%;
+    padding: var(--space-lg);
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--on-surface-variant);
+  }
+
+  @media (max-width: 900px) {
+    .video-split {
+      grid-template-columns: 1fr;
+    }
+    .video-side {
+      min-height: 0;
+    }
+    .video-notes {
+      position: static;
+      max-height: 520px;
+    }
+    .video-notes-steps {
+      max-height: none;
+    }
+    .video-code {
+      flex: 0 0 auto;
+      max-height: 260px;
+    }
+    .pdf-viewer {
+      height: 520px;
+    }
+  }
