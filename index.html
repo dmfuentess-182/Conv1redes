@@ -1124,10 +1124,10 @@ Fa0/2            Altn BLK 19        128.2    P2p</div>
           <div>
             <h3 style="font-size: 1.125rem; font-weight: 600;">Laboratorio Práctico en Video: Configuración OSPF en Packet Tracer</h3>
             <p style="font-size: 0.875rem; color: var(--on-surface-variant);">
-              Video explicativo: <em>"OSPF Explicado en 5 Minutos | Laboratorio Rápido en Cisco Packet Tracer"</em> (Pedro Lino Cáceres).
+              Video explicativo: <em>"OSPF Explicado en 4 Minutos | Laboratorio Rápido en Cisco Packet Tracer"</em> (CIPAS ERROR 404).
             </p>
           </div>
-          <span class="tag highlight"><i data-lucide="play-circle" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> Video ID: -Hc_89bX4RM</span>
+         
         </div>
 
         <div class="grid-split">
@@ -1135,8 +1135,8 @@ Fa0/2            Altn BLK 19        128.2    P2p</div>
           <div>
             <div class="video-wrapper">
               <iframe 
-                src="https://www.youtube.com/embed/-Hc_89bX4RM" 
-                title="OSPF Explicado en 5 Minutos | Laboratorio Rápido en Cisco Packet Tracer" 
+                src="https://youtu.be/X00ZlJYXuGI?si=SThmLPHgA61rZMrW" 
+                title="OSPF Explicado en 4 Minutos | Laboratorio Rápido en Cisco Packet Tracer" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
               </iframe>
@@ -1156,23 +1156,23 @@ Fa0/2            Altn BLK 19        128.2    P2p</div>
               <div style="display: flex; flex-direction: column; gap: var(--space-xs); font-size: 0.8125rem;">
                 <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                   <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">00:00</span>
-                  <div><strong>Conceptos:</strong> Protocolo estado de enlace, estándar abierto e intercambio de LSAs.</div>
+                  <div><strong>Topología</strong> Se usan dos router 2901 y dos pc conectados por cable Copper Straight-Through.</div>
                 </div>
                 <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
-                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">01:15</span>
-                  <div><strong>Métrica:</strong> Costo en función del ancho de banda vs saltos de RIP. AD = 110.</div>
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">00:10</span>
+                  <div><strong>Config PC:</strong> Se configuran los dos PC con sus ip, mascara, gateway y dns.</div>
                 </div>
                 <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
-                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">02:00</span>
-                  <div><strong>Áreas:</strong> Definición del Área Backbone 0 y sincronización de LSDB.</div>
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">00:33</span>
+                  <div><strong>Config Router0:</strong> Se configura el router0 con hostname R1.</div>
                 </div>
                 <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
-                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">03:00</span>
-                  <div><strong>CLI R1:</strong> <code>router ospf 1</code>, <code>network 10.10.1.0 0.0.0.255 area 0</code></div>
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">01:29</span>
+                  <div><strong>Config Router1:</strong> Se configura el router0 con hostname R2.</div>
                 </div>
                 <div style="display: flex; gap: var(--space-xs); align-items: flex-start;">
-                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">04:30</span>
-                  <div><strong>Verificación:</strong> Paquetes Hello, <code>show ip route</code> y conectividad ping exitosa.</div>
+                  <span class="mono-cell" style="color: var(--primary); font-weight: 600; min-width: 48px;">03:09</span>
+                  <div><strong>Verificación:</strong> Se realiza el ping entre los pc.</div>
                 </div>
               </div>
             </div>
@@ -1180,11 +1180,39 @@ Fa0/2            Altn BLK 19        128.2    P2p</div>
             <div style="border-top: var(--rule); padding-top: var(--space-sm); margin-top: var(--space-sm);">
               <span class="form-label" style="display: block; margin-bottom: 4px;">Comandos IOS de R1 para Copiar:</span>
               <pre class="mono-cell" style="background-color: var(--surface-terminal); color: var(--on-terminal); padding: 8px; font-size: 0.72rem; overflow-x: auto;">Router# configure terminal
-Router(config)# hostname R1
-R1(config)# router ospf 1
-R1(config-router)# network 10.10.1.0 0.0.0.255 area 0
-R1(config-router)# network 192.168.12.0 0.0.0.255 area 0
-R1(config-router)# end</pre>
+enable
+configure terminal
+hostname R1
+interface GigabitEthernet0/0
+ip address 10.10.1.1 255.255.255.0
+no shutdown
+exit
+interface GigabitEthernet0/1
+ip address 192.168.12.1 255.255.255.0
+no shutdown
+exit
+router ospf 1
+network 10.10.1.0 0.0.0.255 area 0
+network 192.168.12.0 0.0.0.255 area 0
+end
+write memory
+
+enable
+configure terminal
+hostname R2
+interface GigabitEthernet0/1
+ip address 192.168.12.2 255.255.255.0
+no shutdown
+exit
+interface GigabitEthernet0/0
+ip address 172.16.1.1 255.255.255.0
+no shutdown
+exit
+router ospf 1
+network 192.168.12.0 0.0.0.255 area 0
+network 172.16.1.0 0.0.0.255 area 0
+end
+write memory</pre>
             </div>
           </div>
         </div>
